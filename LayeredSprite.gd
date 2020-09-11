@@ -23,11 +23,9 @@ func move_layer(name: String, to_position: int) -> bool:
 # Returns the position of the child.
 func get_layer_position(name: String) -> int:
 	var position = 0
-	
 	for child in get_children():
 		if child.name == name: return position
 		position += 1
-	
 	return -1
 
 
@@ -56,7 +54,7 @@ func get_layers() -> Dictionary:
 	var layers := {}
 	for child in get_children():
 		if child is Sprite:
-			layers[child.name] = child.texture
+			layers[child.name] = child
 	return layers
 
 
