@@ -1,13 +1,51 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/characters/keia/hair_back/iddle/iddle_d.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/keia/trousers/iddle/trousers_keia00_iddle_d.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/characters/keia/shoes/iddle/shoes_keia00_iddle_d.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/hairfront_keia00_iddle_d.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/characters/keia/makeup/iddle/makeup_keia00_iddle_d.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/characters/keia/face/iddle/face_keia00_iddle_d.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/characters/keia/body/iddle/iddle_d.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/jacket_keia00_iddle_d.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/tshirt_keia00_iddle_d.png" type="Texture" id=11]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
 
 [node name="LayeredSprite" type="Node2D" parent="."]
+position = Vector2( 202.271, 313.898 )
+scale = Vector2( 8, 8 )
 script = ExtResource( 2 )
+
+[node name="HairBack" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 3 )
+
+[node name="Body" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 9 )
+
+[node name="Face" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 8 )
+
+[node name="Makeup" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 7 )
+
+[node name="T-Shirt" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 11 )
+
+[node name="Jacket" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 10 )
+
+[node name="Trousers" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 4 )
+
+[node name="Shoes" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 5 )
+
+[node name="HairFront" type="Sprite" parent="LayeredSprite"]
+texture = ExtResource( 6 )
 
 [node name="Closet" type="MarginContainer" parent="."]
 anchor_right = 1.0
