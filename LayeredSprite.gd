@@ -12,6 +12,25 @@ func set_layer(name: String, texture: Texture) -> bool:
 	return false
 
 
+# Moves the position of this layer.
+func move_layer(name: String, to_position: int) -> bool:
+	if not has_node(name):
+		return false
+	move_child(get_node(name), to_position)
+	return true
+
+
+# Returns the position of the child.
+func get_layer_position(name: String) -> int:
+	var position = 0
+	
+	for child in get_children():
+		if child.name == name: return position
+		position += 1
+	
+	return -1
+
+
 # Adds a layer with the given name and texture.
 func add_layer(name: String, texture: Texture = null) -> bool:
 	# Check if there is a layer with this name already.
