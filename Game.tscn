@@ -1,6 +1,115 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
+
+[node name="LayeredSprite" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Closet" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 70.0
+margin_top = 70.0
+margin_right = -700.0
+margin_bottom = -70.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Closet"]
+margin_right = 254.0
+margin_bottom = 460.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftRow" type="VBoxContainer" parent="Closet/HBoxContainer"]
+margin_right = 20.0
+margin_bottom = 460.0
+
+[node name="VSeparator3" type="VSeparator" parent="Closet/HBoxContainer/LeftRow"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 20.0
+margin_bottom = 150.0
+size_flags_vertical = 3
+
+[node name="LeftButton" type="Button" parent="Closet/HBoxContainer/LeftRow"]
+margin_top = 154.0
+margin_right = 20.0
+margin_bottom = 304.0
+size_flags_vertical = 3
+text = "<"
+
+[node name="VSeparator4" type="VSeparator" parent="Closet/HBoxContainer/LeftRow"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 308.0
+margin_right = 20.0
+margin_bottom = 460.0
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="Closet/HBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 24.0
+margin_right = 90.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+
+[node name="CenterRow" type="VBoxContainer" parent="Closet/HBoxContainer"]
+margin_left = 94.0
+margin_right = 160.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+
+[node name="UpButton" type="Button" parent="Closet/HBoxContainer/CenterRow"]
+margin_right = 66.0
+margin_bottom = 20.0
+text = "Up"
+
+[node name="HSeparator" type="HSeparator" parent="Closet/HBoxContainer/CenterRow"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 24.0
+margin_right = 66.0
+margin_bottom = 436.0
+size_flags_vertical = 3
+
+[node name="DownButton" type="Button" parent="Closet/HBoxContainer/CenterRow"]
+margin_top = 440.0
+margin_right = 66.0
+margin_bottom = 460.0
+text = "Down"
+
+[node name="VSeparator2" type="VSeparator" parent="Closet/HBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 164.0
+margin_right = 230.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+
+[node name="Right" type="VBoxContainer" parent="Closet/HBoxContainer"]
+margin_left = 234.0
+margin_right = 254.0
+margin_bottom = 460.0
+
+[node name="VSeparator3" type="VSeparator" parent="Closet/HBoxContainer/Right"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 20.0
+margin_bottom = 150.0
+size_flags_vertical = 3
+
+[node name="RightButton" type="Button" parent="Closet/HBoxContainer/Right"]
+margin_top = 154.0
+margin_right = 20.0
+margin_bottom = 304.0
+size_flags_vertical = 3
+text = ">"
+
+[node name="VSeparator4" type="VSeparator" parent="Closet/HBoxContainer/Right"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 308.0
+margin_right = 20.0
+margin_bottom = 460.0
+size_flags_vertical = 3
