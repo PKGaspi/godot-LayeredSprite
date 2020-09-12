@@ -46,7 +46,7 @@ func get_layer_position(layer_name: String) -> int:
 	for child in get_children():
 		if child.name == layer_name: return position
 		position += 1
-	push_warning("Layer with name '" + layer_name + "' not found.")
+	push_warning("Layer with name '" + layer_name + "' was not found.")
 	return 0
 
 
@@ -63,7 +63,7 @@ func get_layers() -> Dictionary:
 # Moves the position of this layer.
 func move_layer(layer_name: String, to_position: int) -> void:
 	if not has_node(layer_name):
-		push_warning("Layer with name '" + layer_name + "' not found.")
+		push_warning("Layer with name '" + layer_name + "' was not found.")
 		return 
 	move_child(get_node(layer_name), to_position)
 
@@ -71,7 +71,7 @@ func move_layer(layer_name: String, to_position: int) -> void:
 # Removes the layer with this name.
 func remove_layer(layer_name: String) -> void:
 	if not has_node(layer_name): 
-		push_warning("Layer with name '" + layer_name + "' not found.")
+		push_warning("Layer with name '" + layer_name + "' was not found.")
 		return 
 	get_node(layer_name).queue_free()
 
@@ -86,7 +86,7 @@ func set_animation(animation: String):
 # Sets the frames of an animated layer.
 func set_animated_sprite_layer(layer_name: String, frames: SpriteFrames) -> void:
 	if not has_node(layer_name):
-		push_warning("Layer with name '" + layer_name + "' not found.")
+		push_warning("Layer with name '" + layer_name + "' was not found.")
 		return
 	var layer = get_node(layer_name)
 	if not layer is AnimatedSprite:
