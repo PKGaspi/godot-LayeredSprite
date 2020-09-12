@@ -70,7 +70,7 @@ func remove_layer(name: String) -> void:
 func get_layers() -> Dictionary:
 	var layers := {}
 	for child in get_children():
-		if child is Sprite or child is AnimatedSprite:
+		if (child is Sprite or child is AnimatedSprite) and not child.is_queued_for_deletion():
 			layers[child.name] = child
 	return layers
 
@@ -79,6 +79,6 @@ func get_layers() -> Dictionary:
 func get_layer_count() -> int:
 	var count = 0
 	for child in get_children():
-		if child is Sprite or child is AnimatedSprite:
+		if (child is Sprite or child is AnimatedSprite) and not child.is_queued_for_deletion():
 			count += 1
 	return count
