@@ -2,19 +2,20 @@ class_name LayeredSprite
 extends Node2D
 
 
-# Sets the texture of a layer.
+# Sets the texture of a static layer.
 func set_sprite_layer(name: String, texture: Texture) -> void:
 	if not has_node(name):
 		push_warning("The layer with name '" + name + "' was not found.")
 		return
 	var layer = get_node(name)
 	if not layer is Sprite:
-		push_warning("The layer '" + name + "' is not an AnimatedSprite")
+		push_warning("The layer '" + name + "' is not a Sprite")
+		return
 	
 	layer.texture = texture
 
 
-
+# Sets the frames of an animated layer.
 func set_animated_sprite_layer(name: String, frames: SpriteFrames) -> void:
 	if not has_node(name):
 		push_warning("Layer with name '" + name + "' not found.")
@@ -22,6 +23,7 @@ func set_animated_sprite_layer(name: String, frames: SpriteFrames) -> void:
 	var layer = get_node(name)
 	if not layer is AnimatedSprite:
 		push_warning("The layer '" + name + "' is not an AnimatedSprite")
+		return
 	
 	layer.frames = frames
 
@@ -44,7 +46,7 @@ func get_layer_position(name: String) -> int:
 	return 0
 
 
-# Adds a layer with the given name and texture.
+# Adds a static layer with the given name and texture.
 func add_sprite_layer(name: String, texture: Texture = null) -> void:
 	# Check if there is a layer with this name already.
 	if has_node(name): 
@@ -54,6 +56,19 @@ func add_sprite_layer(name: String, texture: Texture = null) -> void:
 	var new_layer := Sprite.new()
 	new_layer.name = name
 	new_layer.texture = texture
+	add_child(new_layer)
+
+
+# Adds an animated layer with the given name and frames.
+func add_animated_sprite_layer(name: String, frames: SpriteFrames = null) -> void:
+	# Check if there is a layer with this name already.
+	if has_node(name): 
+		push_warning("A layer with name '" + name + "' already exists.")
+		return
+	# Create new layer.
+	var new_layer := AnimatedSprite.new()
+	new_layer.name = name
+	new_layer.frames = frames
 	add_child(new_layer)
 
 
