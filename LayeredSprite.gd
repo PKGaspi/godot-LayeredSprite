@@ -6,27 +6,27 @@ extends Node2D
 
 
 # Adds an animated layer with the given name and frames.
-func add_animated_sprite_layer(name: String, frames: SpriteFrames = null) -> void:
+func add_animated_sprite_layer(layer_name: String, frames: SpriteFrames = null) -> void:
 	# Check if there is a layer with this name already.
-	if has_node(name): 
-		push_warning("A layer with name '" + name + "' already exists.")
+	if has_node(layer_name): 
+		push_warning("A layer with name '" + layer_name + "' already exists.")
 		return
 	# Create new layer.
 	var new_layer := AnimatedSprite.new()
-	new_layer.name = name
+	new_layer.name = layer_name
 	new_layer.frames = frames
 	add_child(new_layer)
 
 
 # Adds a static layer with the given name and texture.
-func add_sprite_layer(name: String, texture: Texture = null) -> void:
+func add_sprite_layer(layer_name: String, texture: Texture = null) -> void:
 	# Check if there is a layer with this name already.
-	if has_node(name): 
-		push_warning("A layer with name '" + name + "' already exists.")
+	if has_node(layer_name): 
+		push_warning("A layer with name '" + layer_name + "' already exists.")
 		return
 	# Create new layer.
 	var new_layer := Sprite.new()
-	new_layer.name = name
+	new_layer.name = layer_name
 	new_layer.texture = texture
 	add_child(new_layer)
 
@@ -41,12 +41,12 @@ func get_layer_count() -> int:
 
 
 # Returns the position of the child.
-func get_layer_position(name: String) -> int:
+func get_layer_position(layer_name: String) -> int:
 	var position = 0
 	for child in get_children():
-		if child.name == name: return position
+		if child.name == layer_name: return position
 		position += 1
-	push_warning("Layer with name '" + name + "' not found.")
+	push_warning("Layer with name '" + layer_name + "' not found.")
 	return 0
 
 
@@ -61,43 +61,64 @@ func get_layers() -> Dictionary:
 
 
 # Moves the position of this layer.
-func move_layer(name: String, to_position: int) -> void:
-	if not has_node(name):
-		push_warning("Layer with name '" + name + "' not found.")
+func move_layer(layer_name: String, to_position: int) -> void:
+	if not has_node(layer_name):
+		push_warning("Layer with name '" + layer_name + "' not found.")
 		return 
-	move_child(get_node(name), to_position)
+	move_child(get_node(layer_name), to_position)
 
 
 # Removes the layer with this name.
-func remove_layer(name: String) -> void:
-	if not has_node(name): 
-		push_warning("Layer with name '" + name + "' not found.")
+func remove_layer(layer_name: String) -> void:
+	if not has_node(layer_name): 
+		push_warning("Layer with name '" + layer_name + "' not found.")
 		return 
-	get_node(name).queue_free()
+	get_node(layer_name).queue_free()
+
+
+# Sets an animation to all animated layers.
+func set_animation(animation: String):
+	for layer in get_layers():
+		if layer is AnimatedSprite and layer.frames.has_animation(animation):
+			layer.animation = animation
 
 
 # Sets the frames of an animated layer.
-func set_animated_sprite_layer(name: String, frames: SpriteFrames) -> void:
-	if not has_node(name):
-		push_warning("Layer with name '" + name + "' not found.")
+func set_animated_sprite_layer(layer_name: String, frames: SpriteFrames) -> void:
+	if not has_node(layer_name):
+		push_warning("Layer with name '" + layer_name + "' not found.")
 		return
-	var layer = get_node(name)
+	var layer = get_node(layer_name)
 	if not layer is AnimatedSprite:
-		push_warning("The layer '" + name + "' is not an AnimatedSprite")
+		push_warning("The layer '" + layer_name + "' is not an AnimatedSprite")
 		return
 	
 	layer.frames = frames
 
 
-# Sets the texture of a static layer.
-func set_sprite_layer(name: String, texture: Texture) -> void:
-	if not has_node(name):
-		push_warning("The layer with name '" + name + "' was not found.")
+# Sets an animation to a particular layer.
+func set_layer_animation(layer_name: String, animation: String) -> void:
+	if not has_node(layer_name):
+		push_warning("The layer with name '" + layer_name + "' was not found.")
 		return
-	var layer = get_node(name)
+	var layer = get_node(layer_name)
+	if not layer is AnimatedSprite:
+		push_warning("The layer '" + layer_name + "' is not an AnimatedSprite")
+		return
+	
+	layer.animation = animation
+
+
+# Sets the texture of a static layer.
+func set_sprite_layer(layer_name: String, texture: Texture) -> void:
+	if not has_node(layer_name):
+		push_warning("The layer with name '" + layer_name + "' was not found.")
+		return
+	var layer = get_node(layer_name)
 	if not layer is Sprite:
-		push_warning("The layer '" + name + "' is not a Sprite")
+		push_warning("The layer '" + layer_name + "' is not a Sprite")
 		return
 	
 	layer.texture = texture
+
 
