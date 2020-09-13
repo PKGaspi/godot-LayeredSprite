@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "LayeredSprite",
 "language": "GDScript",
 "path": "res://LayeredSprite.gd"
+}, {
+"base": "Node",
+"class": "LayeredSpriteCloset",
+"language": "GDScript",
+"path": "res://LayeredSpriteCloset.gd"
 } ]
 _global_script_class_icons={
-"LayeredSprite": ""
+"LayeredSprite": "",
+"LayeredSpriteCloset": ""
 }
 
 [application]
