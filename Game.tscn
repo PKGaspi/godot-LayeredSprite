@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
@@ -12,6 +12,12 @@
 [ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/jacket_keia00_iddle_d.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/tshirt_keia00_iddle_d.png" type="Texture" id=11]
 [ext_resource path="res://LayeredSpriteCloset.gd" type="Script" id=12]
+[ext_resource path="res://resources/layer_group_hair.tres" type="Resource" id=13]
+[ext_resource path="res://resources/layer_group_face.tres" type="Resource" id=14]
+[ext_resource path="res://resources/layer_group_t-shirt.tres" type="Resource" id=15]
+[ext_resource path="res://resources/layer_group_trousers.tres" type="Resource" id=16]
+[ext_resource path="res://resources/layer_group_jacket.tres" type="Resource" id=17]
+[ext_resource path="res://resources/layer_group_shoes.tres" type="Resource" id=18]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -156,10 +162,7 @@ size_flags_vertical = 3
 [node name="LayeredSpriteCloset" type="Node" parent="."]
 script = ExtResource( 12 )
 _layered_sprite_path = NodePath("../LayeredSprite")
-_groups = {
-"Face": PoolStringArray( "Face", "Makeup" ),
-"Hair": PoolStringArray( "HairBack", "HairFront" )
-}
+_groups = [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 16 ) ]
 
 [node name="Group" type="Label" parent="."]
 margin_left = 575.0
