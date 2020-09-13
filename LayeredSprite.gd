@@ -1,8 +1,9 @@
 class_name LayeredSprite
 extends Node2D
 
-
-
+# LayeredSprite, a node to manage separated Sprite and/or AnimatedSprite
+# nodes to make the illusion of them working as one, while being able
+# to modify layers individualy.
 
 
 # Adds an animated layer with the given name and frames.
