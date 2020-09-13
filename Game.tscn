@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/sprites/characters/keia/body/iddle/iddle_d.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/jacket_keia00_iddle_d.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/tshirt_keia00_iddle_d.png" type="Texture" id=11]
+[ext_resource path="res://LayeredSpriteCloset.gd" type="Script" id=12]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -47,7 +48,7 @@ texture = ExtResource( 5 )
 [node name="HairFront" type="Sprite" parent="LayeredSprite"]
 texture = ExtResource( 6 )
 
-[node name="Closet" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
@@ -58,96 +59,120 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Closet"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 margin_right = 254.0
 margin_bottom = 460.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeftRow" type="VBoxContainer" parent="Closet/HBoxContainer"]
+[node name="LeftRow" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 margin_right = 20.0
 margin_bottom = 460.0
 
-[node name="VSeparator3" type="VSeparator" parent="Closet/HBoxContainer/LeftRow"]
+[node name="VSeparator3" type="VSeparator" parent="MarginContainer/HBoxContainer/LeftRow"]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 20.0
 margin_bottom = 150.0
 size_flags_vertical = 3
 
-[node name="LeftButton" type="Button" parent="Closet/HBoxContainer/LeftRow"]
+[node name="LeftButton" type="Button" parent="MarginContainer/HBoxContainer/LeftRow"]
 margin_top = 154.0
 margin_right = 20.0
 margin_bottom = 304.0
 size_flags_vertical = 3
 text = "<"
 
-[node name="VSeparator4" type="VSeparator" parent="Closet/HBoxContainer/LeftRow"]
+[node name="VSeparator4" type="VSeparator" parent="MarginContainer/HBoxContainer/LeftRow"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 308.0
 margin_right = 20.0
 margin_bottom = 460.0
 size_flags_vertical = 3
 
-[node name="VSeparator" type="VSeparator" parent="Closet/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 24.0
 margin_right = 90.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
-[node name="CenterRow" type="VBoxContainer" parent="Closet/HBoxContainer"]
+[node name="CenterRow" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 margin_left = 94.0
 margin_right = 160.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
-[node name="UpButton" type="Button" parent="Closet/HBoxContainer/CenterRow"]
+[node name="UpButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
 margin_right = 66.0
 margin_bottom = 20.0
 text = "Up"
 
-[node name="HSeparator" type="HSeparator" parent="Closet/HBoxContainer/CenterRow"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/CenterRow"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 24.0
 margin_right = 66.0
 margin_bottom = 436.0
 size_flags_vertical = 3
 
-[node name="DownButton" type="Button" parent="Closet/HBoxContainer/CenterRow"]
+[node name="DownButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
 margin_top = 440.0
 margin_right = 66.0
 margin_bottom = 460.0
 text = "Down"
 
-[node name="VSeparator2" type="VSeparator" parent="Closet/HBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 164.0
 margin_right = 230.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
-[node name="Right" type="VBoxContainer" parent="Closet/HBoxContainer"]
+[node name="Right" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 margin_left = 234.0
 margin_right = 254.0
 margin_bottom = 460.0
 
-[node name="VSeparator3" type="VSeparator" parent="Closet/HBoxContainer/Right"]
+[node name="VSeparator3" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 20.0
 margin_bottom = 150.0
 size_flags_vertical = 3
 
-[node name="RightButton" type="Button" parent="Closet/HBoxContainer/Right"]
+[node name="RightButton" type="Button" parent="MarginContainer/HBoxContainer/Right"]
 margin_top = 154.0
 margin_right = 20.0
 margin_bottom = 304.0
 size_flags_vertical = 3
 text = ">"
 
-[node name="VSeparator4" type="VSeparator" parent="Closet/HBoxContainer/Right"]
+[node name="VSeparator4" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 308.0
 margin_right = 20.0
 margin_bottom = 460.0
 size_flags_vertical = 3
+
+[node name="LayeredSpriteCloset" type="Node" parent="."]
+script = ExtResource( 12 )
+_layered_sprite_path = NodePath("../LayeredSprite")
+_group_names = {
+"Body": PoolStringArray( "Body" ),
+"Face": PoolStringArray( "Face", "Makeup" ),
+"Hair": PoolStringArray( "HairFront", "HairBack" ),
+"Jacket": PoolStringArray( "Jacket" ),
+"Shoes": PoolStringArray( "Shoes" ),
+"T-Shirt": PoolStringArray( "T-Shirt" ),
+"Trousers": PoolStringArray( "Trousers" )
+}
+
+[node name="Group" type="Label" parent="."]
+margin_left = 575.0
+margin_top = 112.0
+margin_right = 815.0
+margin_bottom = 209.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
