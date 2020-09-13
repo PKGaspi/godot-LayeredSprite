@@ -20,8 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Layered Sprites"
-run/main_scene="res://Game.tscn"
+config/name="Layered Sprite"
 config/icon="res://icon.png"
 
 [importer_defaults]
