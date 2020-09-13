@@ -156,14 +156,9 @@ size_flags_vertical = 3
 [node name="LayeredSpriteCloset" type="Node" parent="."]
 script = ExtResource( 12 )
 _layered_sprite_path = NodePath("../LayeredSprite")
-_group_names = {
-"Body": PoolStringArray( "Body" ),
+_groups = {
 "Face": PoolStringArray( "Face", "Makeup" ),
-"Hair": PoolStringArray( "HairFront", "HairBack" ),
-"Jacket": PoolStringArray( "Jacket" ),
-"Shoes": PoolStringArray( "Shoes" ),
-"T-Shirt": PoolStringArray( "T-Shirt" ),
-"Trousers": PoolStringArray( "Trousers" )
+"Hair": PoolStringArray( "HairBack", "HairFront" )
 }
 
 [node name="Group" type="Label" parent="."]
