@@ -44,7 +44,7 @@ func next_sprite() -> void:
 
 
 func set_group_index(value: int) -> void:
-	group_index = fposmod(value, len(_groups))
+	group_index = int(fposmod(value, len(_groups)))
 	current_group = _groups[group_index]
 	current_group_name = current_group.name
 
