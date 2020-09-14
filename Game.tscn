@@ -2,15 +2,15 @@
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
-[ext_resource path="res://assets/sprites/characters/keia/hair_back/iddle/iddle_d.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/characters/keia/trousers/iddle/trousers_keia00_iddle_d.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/characters/keia/shoes/iddle/shoes_keia00_iddle_d.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/hairfront_keia00_iddle_d.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/characters/keia/makeup/iddle/makeup_keia00_iddle_d.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/characters/keia/face/iddle/face_keia00_iddle_d.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/characters/keia/hair_back/iddle/00_iddle_d.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/keia/trousers/iddle/00_iddle_d.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/characters/keia/shoes/iddle/00_iddle_d.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/00_iddle_d.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/characters/keia/makeup/iddle/00_iddle_d.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/characters/keia/face/iddle/00_iddle_d.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/characters/keia/body/iddle/iddle_d.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/jacket_keia00_iddle_d.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/tshirt_keia00_iddle_d.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/00_iddle_d.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/00_iddle_d.png" type="Texture" id=11]
 [ext_resource path="res://LayeredSpriteCloset.gd" type="Script" id=12]
 [ext_resource path="res://resources/layer_group_hair.tres" type="Resource" id=13]
 [ext_resource path="res://resources/layer_group_face.tres" type="Resource" id=14]
@@ -172,5 +172,7 @@ margin_bottom = 209.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="button_up" from="MarginContainer/HBoxContainer/LeftRow/LeftButton" to="LayeredSpriteCloset" method="previous_sprite"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/Right/RightButton" to="." method="next_sprite"]

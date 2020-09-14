@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hairfront_keia00_iddle_d.png-70661edef77cbb67caf041b3dee47edc.stex"
+path="res://.import/00_iddle_d.png-bcb25e67fbd2728ca9cbe241a1f3174b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/keia/hair_front/iddle/hairfront_keia00_iddle_d.png"
-dest_files=[ "res://.import/hairfront_keia00_iddle_d.png-70661edef77cbb67caf041b3dee47edc.stex" ]
+source_file="res://assets/sprites/characters/keia/t-shirt/iddle/00_iddle_d.png"
+dest_files=[ "res://.import/00_iddle_d.png-bcb25e67fbd2728ca9cbe241a1f3174b.stex" ]
 
 [params]
 

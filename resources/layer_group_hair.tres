@@ -1,11 +1,17 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/iddle_d.png-139332c047f502735bda2753785fe367.stex"
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/hairfront_keia00_iddle_d.png-70661edef77cbb67caf041b3dee47edc.stex"
 
 [resource]
 script = ExtResource( 1 )
 name = "Hair"
 members = {
-"HairBack": null,
-"HairFront": null
+"HairBack": [ SubResource( 1 ) ],
+"HairFront": [ SubResource( 2 ) ]
 }

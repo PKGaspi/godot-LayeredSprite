@@ -27,8 +27,12 @@ func _input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	group_label.text = closet.current_group
+	group_label.text = closet.current_group_name
 
 
 func exit_game(exit_code: int = 0) -> void:
 	get_tree().quit(exit_code)
+
+
+func next_sprite() -> void:
+	pass # Replace with function body.
