@@ -175,4 +175,4 @@ __meta__ = {
 [connection signal="button_up" from="MarginContainer/HBoxContainer/LeftRow/LeftButton" to="LayeredSpriteCloset" method="previous_sprite"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
-[connection signal="button_up" from="MarginContainer/HBoxContainer/Right/RightButton" to="." method="next_sprite"]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/Right/RightButton" to="LayeredSpriteCloset" method="next_sprite"]

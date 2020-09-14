@@ -32,7 +32,3 @@ func _physics_process(delta: float) -> void:
 
 func exit_game(exit_code: int = 0) -> void:
 	get_tree().quit(exit_code)
-
-
-func next_sprite() -> void:
-	pass # Replace with function body.
