@@ -13,7 +13,8 @@ var _layered_sprite: LayeredSprite
 export(Array, Resource) var _groups: Array
 
 var group_index: int = 0 setget set_group_index
-var current_group: String
+var current_group: LayerGroup
+var current_group_name: String
 
 
 
@@ -24,17 +25,31 @@ func _ready() -> void:
 	set_group_index(0)
 
 
-
 func previous_group() -> void:
 	set_group_index(group_index-1)
+
+
+func previous_sprite() -> void:
+	_groups[group_index].previous_sprite()
+	_set_sprite()
 
 
 func next_group() -> void:
 	set_group_index(group_index+1)
 
 
+func next_sprite() -> void:
+	_groups[group_index].next_sprite()
+	_set_sprite()
+
+
 func set_group_index(value: int) -> void:
 	group_index = fposmod(value, len(_groups))
-	current_group = _groups[group_index].name
+	current_group = _groups[group_index]
+	current_group_name = current_group.name
 
 
+func _set_sprite() -> void:
+	var sprites = current_group.get_selected_sprites()
+	for sprite in sprites:
+		_layered_sprite.set_sprite_layer(sprite, sprites[sprite])
