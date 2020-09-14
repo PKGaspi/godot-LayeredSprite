@@ -59,14 +59,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
 margin_top = 70.0
-margin_right = -700.0
+margin_right = -621.0
 margin_bottom = -70.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-margin_right = 254.0
+margin_right = 333.0
 margin_bottom = 460.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -99,44 +99,44 @@ size_flags_vertical = 3
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 24.0
-margin_right = 90.0
+margin_right = 92.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="CenterRow" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 94.0
-margin_right = 160.0
+margin_left = 96.0
+margin_right = 164.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="UpButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
-margin_right = 66.0
+margin_right = 68.0
 margin_bottom = 20.0
 text = "Up"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/CenterRow"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 24.0
-margin_right = 66.0
+margin_right = 68.0
 margin_bottom = 436.0
 size_flags_vertical = 3
 
 [node name="DownButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
 margin_top = 440.0
-margin_right = 66.0
+margin_right = 68.0
 margin_bottom = 460.0
 text = "Down"
 
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 164.0
-margin_right = 230.0
+margin_left = 168.0
+margin_right = 236.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="Right" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 234.0
-margin_right = 254.0
+margin_left = 240.0
+margin_right = 260.0
 margin_bottom = 460.0
 
 [node name="VSeparator3" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
@@ -159,19 +159,57 @@ margin_right = 20.0
 margin_bottom = 460.0
 size_flags_vertical = 3
 
+[node name="Values" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 264.0
+margin_right = 333.0
+margin_bottom = 460.0
+size_flags_horizontal = 3
+
+[node name="Group" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
+margin_right = 69.0
+margin_bottom = 14.0
+
+[node name="Group" type="Label" parent="MarginContainer/HBoxContainer/Values/Group"]
+margin_right = 43.0
+margin_bottom = 14.0
+text = "Group:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GroupValue" type="Label" parent="MarginContainer/HBoxContainer/Values/Group"]
+margin_left = 47.0
+margin_right = 47.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
+margin_top = 18.0
+margin_right = 69.0
+margin_bottom = 32.0
+
+[node name="Sprite" type="Label" parent="MarginContainer/HBoxContainer/Values/Sprite"]
+margin_right = 41.0
+margin_bottom = 14.0
+text = "Sprite:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpriteValue" type="Label" parent="MarginContainer/HBoxContainer/Values/Sprite"]
+margin_left = 45.0
+margin_right = 45.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LayeredSpriteCloset" type="Node" parent="."]
 script = ExtResource( 12 )
 _layered_sprite_path = NodePath("../LayeredSprite")
 _groups = [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 16 ) ]
-
-[node name="Group" type="Label" parent="."]
-margin_left = 575.0
-margin_top = 112.0
-margin_right = 815.0
-margin_bottom = 209.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="button_up" from="MarginContainer/HBoxContainer/LeftRow/LeftButton" to="LayeredSpriteCloset" method="previous_sprite"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
