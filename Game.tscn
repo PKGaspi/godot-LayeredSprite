@@ -59,14 +59,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 70.0
 margin_top = 70.0
-margin_right = -621.0
+margin_right = -563.0
 margin_bottom = -70.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-margin_right = 333.0
+margin_right = 391.0
 margin_bottom = 460.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -99,44 +99,44 @@ size_flags_vertical = 3
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 24.0
-margin_right = 92.0
+margin_right = 73.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="CenterRow" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 96.0
-margin_right = 164.0
+margin_left = 77.0
+margin_right = 179.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="UpButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
-margin_right = 68.0
+margin_right = 102.0
 margin_bottom = 20.0
-text = "Up"
+text = "Previous layer"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/CenterRow"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 24.0
-margin_right = 68.0
+margin_right = 102.0
 margin_bottom = 436.0
 size_flags_vertical = 3
 
 [node name="DownButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
 margin_top = 440.0
-margin_right = 68.0
+margin_right = 102.0
 margin_bottom = 460.0
-text = "Down"
+text = "Next layer"
 
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 168.0
-margin_right = 236.0
+margin_left = 183.0
+margin_right = 232.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="Right" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 240.0
-margin_right = 260.0
+margin_left = 236.0
+margin_right = 256.0
 margin_bottom = 460.0
 
 [node name="VSeparator3" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
@@ -160,13 +160,13 @@ margin_bottom = 460.0
 size_flags_vertical = 3
 
 [node name="Values" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 264.0
-margin_right = 333.0
+margin_left = 260.0
+margin_right = 390.0
 margin_bottom = 460.0
-size_flags_horizontal = 3
+rect_min_size = Vector2( 130, 0 )
 
 [node name="Group" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
-margin_right = 69.0
+margin_right = 130.0
 margin_bottom = 14.0
 
 [node name="Group" type="Label" parent="MarginContainer/HBoxContainer/Values/Group"]
@@ -187,7 +187,7 @@ __meta__ = {
 
 [node name="Sprite" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
 margin_top = 18.0
-margin_right = 69.0
+margin_right = 130.0
 margin_bottom = 32.0
 
 [node name="Sprite" type="Label" parent="MarginContainer/HBoxContainer/Values/Sprite"]
