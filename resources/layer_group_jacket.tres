@@ -8,5 +8,5 @@
 script = ExtResource( 1 )
 name = "Jacket"
 members = {
-"Jacket": [ ExtResource( 2 ), ExtResource( 3 ) ]
+"Jacket": [ ExtResource( 2 ), ExtResource( 3 ), null ]
 }

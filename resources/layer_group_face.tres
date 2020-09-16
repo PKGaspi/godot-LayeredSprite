@@ -1,6 +1,8 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/characters/keia/makeup/iddle/01_iddle_d.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/characters/keia/face/iddle/01_iddle_d.png" type="Texture" id=3]
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/face_keia00_iddle_d.png-139cd3eb6e9ac1c2735b3ddba1a60c0f.stex"
@@ -12,6 +14,6 @@ load_path = "res://.import/makeup_keia00_iddle_d.png-2bcdc6c024ca5a9bb770892eae4
 script = ExtResource( 1 )
 name = "Face"
 members = {
-"Face": [ SubResource( 1 ) ],
-"Makeup": [ SubResource( 2 ) ]
+"Face": [ SubResource( 1 ), ExtResource( 3 ) ],
+"Makeup": [ SubResource( 2 ), ExtResource( 2 ) ]
 }
