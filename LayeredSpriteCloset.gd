@@ -26,21 +26,19 @@ func _ready() -> void:
 
 
 func previous_group() -> void:
-	set_group_index(group_index-1)
+	set_group_index(group_index - 1)
 
 
 func previous_sprite() -> void:
-	_groups[group_index].previous_sprite()
-	_set_sprite()
+	set_sprite_index(current_group.sprite_index - 1)
 
 
 func next_group() -> void:
-	set_group_index(group_index+1)
+	set_group_index(group_index + 1)
 
 
 func next_sprite() -> void:
-	_groups[group_index].next_sprite()
-	_set_sprite()
+	set_sprite_index(current_group.sprite_index + 1)
 
 
 func set_group_index(value: int) -> void:
@@ -49,7 +47,12 @@ func set_group_index(value: int) -> void:
 	current_group_name = current_group.name
 
 
-func _set_sprite() -> void:
+func set_sprite_index(value: int) -> void:
+	current_group.set_sprite_index(value)
+	_apply()
+
+
+func _apply() -> void:
 	var sprites = current_group.get_selected_sprites()
 	for sprite in sprites:
 		_layered_sprite.set_sprite_layer(sprite, sprites[sprite])
