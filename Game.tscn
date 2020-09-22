@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/00_iddle_d.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/characters/keia/makeup/iddle/00_iddle_d.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/characters/keia/face/iddle/00_iddle_d.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/iddle_d.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/characters/keia/body/iddle/00_iddle_d.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/00_iddle_d.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/00_iddle_d.png" type="Texture" id=11]
 [ext_resource path="res://LayeredSpriteCloset.gd" type="Script" id=12]
@@ -18,6 +18,7 @@
 [ext_resource path="res://resources/layer_group_trousers.tres" type="Resource" id=16]
 [ext_resource path="res://resources/layer_group_jacket.tres" type="Resource" id=17]
 [ext_resource path="res://resources/layer_group_shoes.tres" type="Resource" id=18]
+[ext_resource path="res://resources/layer_group_body.tres" type="Resource" id=19]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -37,6 +38,7 @@ texture = ExtResource( 9 )
 texture = ExtResource( 8 )
 
 [node name="Makeup" type="Sprite" parent="LayeredSprite"]
+visible = false
 texture = ExtResource( 7 )
 
 [node name="T-Shirt" type="Sprite" parent="LayeredSprite"]
@@ -85,13 +87,13 @@ size_flags_vertical = 3
 [node name="LeftButton" type="Button" parent="MarginContainer/HBoxContainer/LeftRow"]
 margin_top = 154.0
 margin_right = 20.0
-margin_bottom = 304.0
+margin_bottom = 305.0
 size_flags_vertical = 3
 text = "<"
 
 [node name="VSeparator4" type="VSeparator" parent="MarginContainer/HBoxContainer/LeftRow"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 308.0
+margin_top = 309.0
 margin_right = 20.0
 margin_bottom = 460.0
 size_flags_vertical = 3
@@ -130,13 +132,13 @@ text = "Next layer"
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 183.0
-margin_right = 232.0
+margin_right = 233.0
 margin_bottom = 460.0
 size_flags_horizontal = 3
 
 [node name="Right" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 236.0
-margin_right = 256.0
+margin_left = 237.0
+margin_right = 257.0
 margin_bottom = 460.0
 
 [node name="VSeparator3" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
@@ -148,20 +150,20 @@ size_flags_vertical = 3
 [node name="RightButton" type="Button" parent="MarginContainer/HBoxContainer/Right"]
 margin_top = 154.0
 margin_right = 20.0
-margin_bottom = 304.0
+margin_bottom = 305.0
 size_flags_vertical = 3
 text = ">"
 
 [node name="VSeparator4" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 308.0
+margin_top = 309.0
 margin_right = 20.0
 margin_bottom = 460.0
 size_flags_vertical = 3
 
 [node name="Values" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 260.0
-margin_right = 390.0
+margin_left = 261.0
+margin_right = 391.0
 margin_bottom = 460.0
 rect_min_size = Vector2( 130, 0 )
 
@@ -209,7 +211,7 @@ __meta__ = {
 [node name="LayeredSpriteCloset" type="Node" parent="."]
 script = ExtResource( 12 )
 _layered_sprite_path = NodePath("../LayeredSprite")
-_groups = [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 16 ) ]
+_groups = [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/LeftRow/LeftButton" to="LayeredSpriteCloset" method="previous_sprite"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
