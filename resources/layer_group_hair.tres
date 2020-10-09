@@ -1,8 +1,8 @@
 [gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/01_iddle_d.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/characters/keia/hair_back/iddle/01_iddle_d.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/01_d.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/characters/keia/hair_back/iddle/01_d.png" type="Texture" id=3]
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/iddle_d.png-139332c047f502735bda2753785fe367.stex"

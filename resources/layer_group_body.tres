@@ -1,16 +1,18 @@
 [gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/00_iddle_d.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/01_iddle_d.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/02_iddle_d.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/04_iddle_d.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/05_iddle_d.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/03_iddle_d.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/characters/keia/body/iddle/01_d.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/characters/keia/body/iddle/02_d.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/keia/body/iddle/04_d.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/characters/keia/body/iddle/05_d.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/characters/keia/body/iddle/03_d.png" type="Texture" id=6]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/00_iddle_d.png-bbb6cd195750d295615a889093fad79b.stex"
 
 [resource]
 script = ExtResource( 1 )
 name = "Body"
 members = {
-"Body": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ) ]
+"Body": [ SubResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ) ]
 }

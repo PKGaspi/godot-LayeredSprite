@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/03_iddle_d.png-e1871fde05cc56219576b9f21c2d6d6d.stex"
+path="res://.import/00_d.png-f00cc348ce5dae023606e76f1f9374f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/keia/body/iddle/03_iddle_d.png"
-dest_files=[ "res://.import/03_iddle_d.png-e1871fde05cc56219576b9f21c2d6d6d.stex" ]
+source_file="res://assets/sprites/characters/keia/body/iddle/00_d.png"
+dest_files=[ "res://.import/00_d.png-f00cc348ce5dae023606e76f1f9374f1.stex" ]
 
 [params]
 

@@ -1,12 +1,14 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/00_iddle_d.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/01_iddle_d.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/01_d.png" type="Texture" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/00_iddle_d.png-90de74813e2c40432212cfe43ed3abd8.stex"
 
 [resource]
 script = ExtResource( 1 )
 name = "Jacket"
 members = {
-"Jacket": [ ExtResource( 2 ), ExtResource( 3 ), null ]
+"Jacket": [ SubResource( 1 ), ExtResource( 2 ), null ]
 }
