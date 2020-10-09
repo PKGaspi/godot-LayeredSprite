@@ -99,19 +99,6 @@ func set_animation(animation: String):
 			layer.animation = animation
 
 
-# Sets the frames of an animated layer.
-func set_animated_sprite_layer(layer_name: String, frames: SpriteFrames) -> void:
-	if not has_layer(layer_name):
-		push_warning("Layer with name '" + layer_name + "' was not found.")
-		return
-	var layer = get_node(layer_name)
-	if not layer is AnimatedSprite:
-		push_warning("The layer '" + layer_name + "' is not an AnimatedSprite")
-		return
-	
-	layer.frames = frames
-
-
 # Sets an animation to a particular layer.
 func set_layer_animation(layer_name: String, animation: String) -> void:
 	if not has_layer(layer_name):
@@ -125,8 +112,33 @@ func set_layer_animation(layer_name: String, animation: String) -> void:
 	layer.animation = animation
 
 
+# Sets the texture or animation to a particular layer.
+func set_layer_asset(layer_name: String, asset) -> void:
+	if not has_layer(layer_name):
+		push_warning("The layer with name '" + layer_name + "' was not found.")
+		return
+	var layer = get_node(layer_name)
+	if layer is AnimatedSprite:
+		_set_animated_sprite_layer_asset(layer_name, asset)
+	elif layer is Sprite:
+		_set_sprite_layer_asset(layer_name, asset)
+
+
+# Sets the frames of an animated layer.
+func _set_animated_sprite_layer_asset(layer_name: String, frames: SpriteFrames) -> void:
+	if not has_layer(layer_name):
+		push_warning("Layer with name '" + layer_name + "' was not found.")
+		return
+	var layer = get_node(layer_name)
+	if not layer is AnimatedSprite:
+		push_warning("The layer '" + layer_name + "' is not an AnimatedSprite")
+		return
+	
+	layer.frames = frames
+	
+
 # Sets the texture of a static layer.
-func set_sprite_layer(layer_name: String, texture: Texture) -> void:
+func _set_sprite_layer_asset(layer_name: String, texture: Texture) -> void:
 	if not has_layer(layer_name):
 		push_warning("The layer with name '" + layer_name + "' was not found.")
 		return

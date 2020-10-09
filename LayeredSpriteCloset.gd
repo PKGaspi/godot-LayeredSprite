@@ -55,4 +55,4 @@ func set_sprite_index(value: int) -> void:
 func _apply() -> void:
 	var sprites = current_group.get_selected_sprites()
 	for sprite in sprites:
-		_layered_sprite.set_sprite_layer(sprite, sprites[sprite])
+		_layered_sprite.set_layer_asset(sprite, sprites[sprite])
