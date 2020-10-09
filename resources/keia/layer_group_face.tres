@@ -4,16 +4,16 @@
 [ext_resource path="res://assets/sprites/characters/keia/makeup/iddle/01_d.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/characters/keia/face/iddle/01_d.png" type="Texture" id=3]
 
-[sub_resource type="StreamTexture" id=2]
+[sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/00_iddle_d.png-66d11058db5dce87a80d26bfb83a3e0b.stex"
 
-[sub_resource type="StreamTexture" id=1]
+[sub_resource type="StreamTexture" id=2]
 load_path = "res://.import/makeup_keia00_iddle_d.png-2bcdc6c024ca5a9bb770892eae46b0ec.stex"
 
 [resource]
 script = ExtResource( 1 )
 name = "Face"
 members = {
-"Face": [ SubResource( 2 ), ExtResource( 3 ) ],
-"Makeup": [ SubResource( 1 ), ExtResource( 2 ) ]
+"Face": [ SubResource( 1 ), ExtResource( 3 ) ],
+"Makeup": [ SubResource( 2 ), ExtResource( 2 ) ]
 }

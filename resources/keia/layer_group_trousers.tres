@@ -4,8 +4,6 @@
 [ext_resource path="res://assets/sprites/characters/keia/trousers/iddle/01_d.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/characters/keia/trousers/iddle/02_d.png" type="Texture" id=4]
 
-
-
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/00_iddle_d.png-d93219d1716782d82c8258e02210a261.stex"
 
