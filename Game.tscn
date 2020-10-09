@@ -217,6 +217,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Animations" type="OptionButton" parent="MarginContainer/HBoxContainer/Values"]
+margin_top = 36.0
+margin_right = 130.0
+margin_bottom = 56.0
+text = "Animation"
+flat = true
+
 [node name="LayeredSpriteCloset" type="Node" parent="."]
 script = ExtResource( 12 )
 _layered_sprite_path = NodePath("../LayeredSprite")
@@ -225,3 +232,4 @@ _groups = [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/Right/RightButton" to="LayeredSpriteCloset" method="next_sprite"]
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/Values/Animations" to="." method="_on_Animations_item_selected"]
