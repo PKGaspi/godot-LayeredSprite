@@ -31,39 +31,48 @@ script = ExtResource( 2 )
 [node name="HairBack" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 9 )
 animation = "iddle_d"
+playing = true
 
 [node name="Body" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 7 )
 animation = "iddle_d"
+playing = true
 
 [node name="Face" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 5 )
 animation = "iddle_d"
+playing = true
 
 [node name="Makeup" type="AnimatedSprite" parent="LayeredSprite"]
 visible = false
 frames = ExtResource( 8 )
 animation = "iddle_d"
+playing = true
 
 [node name="T-Shirt" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 6 )
 animation = "iddle_d"
+playing = true
 
 [node name="Jacket" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 10 )
 animation = "iddle_d"
+playing = true
 
 [node name="Trousers" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 4 )
 animation = "iddle_d"
+playing = true
 
 [node name="Shoes" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 3 )
 animation = "iddle_d"
+playing = true
 
 [node name="HairFront" type="AnimatedSprite" parent="LayeredSprite"]
 frames = ExtResource( 11 )
 animation = "iddle_d"
+playing = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
