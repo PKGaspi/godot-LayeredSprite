@@ -135,6 +135,7 @@ func _set_animated_sprite_layer_asset(layer_name: String, frames: SpriteFrames) 
 		push_warning("The layer '" + layer_name + "' is not an AnimatedSprite")
 		return
 	
+	yield(layer, "frame_changed")
 	layer.frames = frames
 	
 
