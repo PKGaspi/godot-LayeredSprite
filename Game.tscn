@@ -2,15 +2,15 @@
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
-[ext_resource path="res://assets/sprites/characters/keia/hair_back/iddle/00_d.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/characters/keia/trousers/iddle/00_d.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/characters/keia/shoes/iddle/00_d.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/00_d.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/characters/keia/makeup/iddle/00_d.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/characters/keia/face/iddle/00_d.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/characters/keia/body/iddle/00_d.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/characters/keia/jacket/iddle/00_d.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/00_d.png" type="Texture" id=11]
+[ext_resource path="res://resources/keia/shoes/00.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://resources/keia/trousers/00.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://resources/keia/face/00.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://resources/keia/t-shirt/00.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://resources/keia/body/00.tres" type="SpriteFrames" id=7]
+[ext_resource path="res://resources/keia/makeup/00.tres" type="SpriteFrames" id=8]
+[ext_resource path="res://resources/keia/hair_back/00.tres" type="SpriteFrames" id=9]
+[ext_resource path="res://resources/keia/jacket/00.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://resources/keia/hair_front/00.tres" type="SpriteFrames" id=11]
 [ext_resource path="res://LayeredSpriteCloset.gd" type="Script" id=12]
 [ext_resource path="res://resources/keia/layer_group_hair.tres" type="Resource" id=13]
 [ext_resource path="res://resources/keia/layer_group_face.tres" type="Resource" id=14]
@@ -28,33 +28,42 @@ position = Vector2( 202.271, 313.898 )
 scale = Vector2( 8, 8 )
 script = ExtResource( 2 )
 
-[node name="HairBack" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 3 )
+[node name="HairBack" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 9 )
+animation = "iddle_d"
 
-[node name="Body" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 9 )
+[node name="Body" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 7 )
+animation = "iddle_d"
 
-[node name="Face" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 8 )
+[node name="Face" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 5 )
+animation = "iddle_d"
 
-[node name="Makeup" type="Sprite" parent="LayeredSprite"]
+[node name="Makeup" type="AnimatedSprite" parent="LayeredSprite"]
 visible = false
-texture = ExtResource( 7 )
+frames = ExtResource( 8 )
+animation = "iddle_d"
 
-[node name="T-Shirt" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 11 )
+[node name="T-Shirt" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 6 )
+animation = "iddle_d"
 
-[node name="Jacket" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 10 )
+[node name="Jacket" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 10 )
+animation = "iddle_d"
 
-[node name="Trousers" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 4 )
+[node name="Trousers" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 4 )
+animation = "iddle_d"
 
-[node name="Shoes" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 5 )
+[node name="Shoes" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 3 )
+animation = "iddle_d"
 
-[node name="HairFront" type="Sprite" parent="LayeredSprite"]
-texture = ExtResource( 6 )
+[node name="HairFront" type="AnimatedSprite" parent="LayeredSprite"]
+frames = ExtResource( 11 )
+animation = "iddle_d"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0

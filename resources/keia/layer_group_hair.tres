@@ -1,19 +1,17 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/keia/hair_front/iddle/01_d.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/characters/keia/hair_back/iddle/01_d.png" type="Texture" id=3]
-
-[sub_resource type="StreamTexture" id=1]
-load_path = "res://.import/iddle_d.png-139332c047f502735bda2753785fe367.stex"
-
-[sub_resource type="StreamTexture" id=2]
-load_path = "res://.import/hairfront_keia00_iddle_d.png-70661edef77cbb67caf041b3dee47edc.stex"
+[ext_resource path="res://resources/keia/hair_back/01.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://resources/keia/hair_back/02.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://resources/keia/hair_front/02.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://resources/keia/hair_front/01.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://resources/keia/hair_back/00.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://resources/keia/hair_front/00.tres" type="SpriteFrames" id=7]
 
 [resource]
 script = ExtResource( 1 )
 name = "Hair"
 members = {
-"HairBack": [ SubResource( 1 ), ExtResource( 3 ) ],
-"HairFront": [ SubResource( 2 ), ExtResource( 2 ) ]
+"HairBack": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"HairFront": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 4 ) ]
 }

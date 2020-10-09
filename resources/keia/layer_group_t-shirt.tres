@@ -1,14 +1,13 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/keia/t-shirt/iddle/01_d.png" type="Texture" id=2]
-
-[sub_resource type="StreamTexture" id=1]
-load_path = "res://.import/00_iddle_d.png-bcb25e67fbd2728ca9cbe241a1f3174b.stex"
+[ext_resource path="res://resources/keia/t-shirt/02.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://resources/keia/t-shirt/01.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://resources/keia/t-shirt/00.tres" type="SpriteFrames" id=4]
 
 [resource]
 script = ExtResource( 1 )
 name = "T-Shirt"
 members = {
-"T-Shirt": [ SubResource( 1 ), ExtResource( 2 ) ]
+"T-Shirt": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ]
 }

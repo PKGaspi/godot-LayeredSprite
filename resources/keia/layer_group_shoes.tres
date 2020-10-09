@@ -1,15 +1,13 @@
 [gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://LayerGroup.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/keia/shoes/iddle/01_d.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/characters/keia/shoes/iddle/02_d.png" type="Texture" id=3]
-
-[sub_resource type="StreamTexture" id=1]
-load_path = "res://.import/00_iddle_d.png-046119fdc21e6cc2ef614f87637d019c.stex"
+[ext_resource path="res://resources/keia/shoes/00.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://resources/keia/shoes/02.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://resources/keia/shoes/01.tres" type="SpriteFrames" id=4]
 
 [resource]
 script = ExtResource( 1 )
 name = "Shoes"
 members = {
-"Shoes": [ SubResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ]
+"Shoes": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ]
 }
