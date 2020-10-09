@@ -94,9 +94,10 @@ func remove_layer(layer_name: String) -> void:
 
 # Sets an animation to all animated layers.
 func set_animation(animation: String):
-	for layer in get_layers():
-		if layer is AnimatedSprite and layer.frames.has_animation(animation):
-			layer.animation = animation
+	var layers = get_layers()
+	for layer in layers:
+		if layers[layer] is AnimatedSprite and layers[layer].frames.has_animation(animation):
+			layers[layer].animation = animation
 
 
 # Sets an animation to a particular layer.
