@@ -13,6 +13,8 @@ func _ready() -> void:
 	for animation in animations:
 		animations_option.add_item(animation, i)
 		i += 1
+	print(layered_sprite.get_layer_position("Body"))
+	print(layered_sprite.get_layer_position("Shoes"))
 
 
 func _input(event: InputEvent) -> void:
@@ -21,8 +23,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	group_label.text = closet.current_group_name
-	sprite_label.text = str(closet.current_group.sprite_index)
+	group_label.text = closet.current_group.name
+	sprite_label.text = str(closet.current_group.asset_index)
 
 
 func exit_game(exit_code: int = 0) -> void:

@@ -252,10 +252,10 @@ pressed = true
 [node name="LayeredSpriteCloset" type="Node" parent="."]
 script = ExtResource( 12 )
 _layered_sprite_path = NodePath("../LayeredSprite")
-_groups = [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ) ]
-[connection signal="button_up" from="MarginContainer/HBoxContainer/LeftRow/LeftButton" to="LayeredSpriteCloset" method="previous_sprite"]
+groups = [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 16 ) ]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/LeftRow/LeftButton" to="LayeredSpriteCloset" method="previous_asset"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
-[connection signal="button_up" from="MarginContainer/HBoxContainer/Right/RightButton" to="LayeredSpriteCloset" method="next_sprite"]
+[connection signal="button_up" from="MarginContainer/HBoxContainer/Right/RightButton" to="LayeredSpriteCloset" method="next_asset"]
 [connection signal="item_selected" from="MarginContainer/HBoxContainer/Values/Animations" to="." method="_on_Animations_item_selected"]
 [connection signal="toggled" from="MarginContainer/HBoxContainer/Values/Makeup/CheckBox" to="." method="_on_CheckBox_toggled"]
