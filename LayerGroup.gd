@@ -6,27 +6,27 @@ export var name: String
 export var members: Dictionary
 
 
-var sprite_index: int = 0
+var asset_index: int = 0
 
 
-func previous_sprite() -> void:
-	set_sprite_index(sprite_index - 1)
+func previous_asset() -> void:
+	set_asset_index(asset_index - 1)
 
 
-func next_sprite() -> void:
-	set_sprite_index(sprite_index + 1)
+func next_asset() -> void:
+	set_asset_index(asset_index + 1)
 
 
-func set_sprite_index(value: int) -> void:
-	var n_sprites := len(members[members.keys()[0]])
-	sprite_index = int(fposmod(value, n_sprites))
+func set_asset_index(value: int) -> void:
+	var n_assets := len(members[members.keys()[0]])
+	asset_index = int(fposmod(value, n_assets))
 
 
-# Returns a dictionary of the selected sprite (Texture or SpriteFrames)
+# Returns a dictionary of the selected asset (Texture or SpriteFrames)
 # of every member of this group, where Key is the member (layer) name and
-# value is the sprite itself.
-func get_selected_sprites() -> Dictionary:
-	var sprites: Dictionary = {}
+# value is the asset itself.
+func get_selected_assets() -> Dictionary:
+	var assets: Dictionary = {}
 	for member in members:
-		sprites[member] = members[member][sprite_index]
-	return sprites
+		assets[member] = members[member][asset_index]
+	return assets

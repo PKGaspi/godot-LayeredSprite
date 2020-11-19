@@ -48,7 +48,7 @@ func get_layer_position(layer_name: String) -> int:
 		if child.name == layer_name: return position
 		position += 1
 	push_warning("Layer with name '" + layer_name + "' was not found.")
-	return 0
+	return -1
 
 
 # Returns a dictionary with key name of the layer
@@ -93,7 +93,7 @@ func remove_layer(layer_name: String) -> void:
 
 
 # Sets an animation to all animated layers.
-func set_animation(animation: String):
+func set_animation(animation: String) -> void:
 	var layers = get_layers()
 	for layer in layers:
 		if layers[layer] is AnimatedSprite and layers[layer].frames.has_animation(animation):
@@ -113,7 +113,7 @@ func set_layer_animation(layer_name: String, animation: String) -> void:
 	layer.animation = animation
 
 
-# Sets the texture or animation to a particular layer.
+# Sets the texture or SpriteFrames to a particular layer.
 func set_layer_asset(layer_name: String, asset) -> void:
 	if not has_layer(layer_name):
 		push_warning("The layer with name '" + layer_name + "' was not found.")
