@@ -137,11 +137,15 @@ func _set_animated_sprite_layer_asset(layer_name: String, frames: SpriteFrames) 
 	
 	if layer.is_playing():
 		yield(layer, "frame_changed")
+		
 	
 	
 	if frames == null:
-		layer.stop()
-	layer.frames = frames
+		layer.visible = false
+	else:
+		layer.visible = true
+		layer.frames = frames
+	
 	
 
 # Sets the texture of a static layer.
