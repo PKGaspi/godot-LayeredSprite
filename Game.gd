@@ -20,7 +20,7 @@ func _input(event: InputEvent) -> void:
 		exit_game()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	group_label.text = closet.current_group_name
 	sprite_label.text = str(closet.current_group.sprite_index)
 
