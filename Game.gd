@@ -31,3 +31,7 @@ func exit_game(exit_code: int = 0) -> void:
 
 func _on_Animations_item_selected(index: int) -> void:
 	layered_sprite.set_animation(animations_option.get_item_text(index))
+
+
+func _on_CheckBox_toggled(button_pressed):
+	layered_sprite.set_layer_visible("Makeup", button_pressed)

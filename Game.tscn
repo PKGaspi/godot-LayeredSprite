@@ -233,6 +233,22 @@ margin_bottom = 56.0
 text = "Animation"
 flat = true
 
+[node name="Makeup" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
+margin_top = 60.0
+margin_right = 130.0
+margin_bottom = 84.0
+
+[node name="Makeup" type="Label" parent="MarginContainer/HBoxContainer/Values/Makeup"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+text = "Makeup"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer/Values/Makeup"]
+margin_left = 54.0
+margin_right = 78.0
+margin_bottom = 24.0
+
 [node name="LayeredSpriteCloset" type="Node" parent="."]
 script = ExtResource( 12 )
 _layered_sprite_path = NodePath("../LayeredSprite")
@@ -242,3 +258,4 @@ _groups = [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/Right/RightButton" to="LayeredSpriteCloset" method="next_sprite"]
 [connection signal="item_selected" from="MarginContainer/HBoxContainer/Values/Animations" to="." method="_on_Animations_item_selected"]
+[connection signal="toggled" from="MarginContainer/HBoxContainer/Values/Makeup/CheckBox" to="." method="_on_CheckBox_toggled"]
