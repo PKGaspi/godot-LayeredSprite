@@ -130,7 +130,7 @@ func set_layer_visible(layer_name: String, value: bool) -> void:
 		push_warning("The layer with name '" + layer_name + "' was not found.")
 		return
 	var layer = get_node(layer_name)
-	_layers_visibility["layer_name"] = value
+	_layers_visibility[layer_name] = value
 	layer.visible = value
 
 
@@ -151,7 +151,7 @@ func _set_animated_sprite_layer_asset(layer_name: String, frames: SpriteFrames) 
 	if frames == null:
 		layer.visible = false
 	else:
-		layer.visible = _layers_visibility[layer_name]
+		layer.visible = _layers_visibility[layer_name] if layer_name in _layers_visibility else true
 		layer.frames = frames
 	
 	
