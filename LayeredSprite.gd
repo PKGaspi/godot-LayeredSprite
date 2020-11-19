@@ -125,6 +125,14 @@ func set_layer_asset(layer_name: String, asset) -> void:
 		_set_sprite_layer_asset(layer_name, asset)
 
 
+func set_layer_visible(layer_name: String, value: bool) -> void:
+	if not has_layer(layer_name):
+		push_warning("The layer with name '" + layer_name + "' was not found.")
+		return
+	var layer = get_node(layer_name)
+	layer.visible = value
+
+
 # Sets the frames of an animated layer.
 func _set_animated_sprite_layer_asset(layer_name: String, frames: SpriteFrames) -> void:
 	if not has_layer(layer_name):
