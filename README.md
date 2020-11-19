@@ -1,6 +1,6 @@
 # Layered Sprite
 ## Introduction
-Layered Sprite is a Godot tool to easyly divide a sprite in layers. It can be used for customizable characters.
+Layered Sprite is a Godot tool to easily divide a sprite in layers. It can be used for customizable characters.
 
 ## Usage
 For a better understanding of the tool, please consider taking a look at the [demo](https://github.com/rapsaGnauJ/godot-LayeredSprite/tree/demo).
