@@ -1,258 +1,189 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=20 format=3 uid="uid://52s4hirgnnl0"]
 
-[ext_resource path="res://Game.gd" type="Script" id=1]
-[ext_resource path="res://LayeredSprite.gd" type="Script" id=2]
-[ext_resource path="res://resources/keia/shoes/00.tres" type="SpriteFrames" id=3]
-[ext_resource path="res://resources/keia/trousers/00.tres" type="SpriteFrames" id=4]
-[ext_resource path="res://resources/keia/face/00.tres" type="SpriteFrames" id=5]
-[ext_resource path="res://resources/keia/t-shirt/00.tres" type="SpriteFrames" id=6]
-[ext_resource path="res://resources/keia/body/00.tres" type="SpriteFrames" id=7]
-[ext_resource path="res://resources/keia/makeup/00.tres" type="SpriteFrames" id=8]
-[ext_resource path="res://resources/keia/hair_back/00.tres" type="SpriteFrames" id=9]
-[ext_resource path="res://resources/keia/jacket/00.tres" type="SpriteFrames" id=10]
-[ext_resource path="res://resources/keia/hair_front/00.tres" type="SpriteFrames" id=11]
-[ext_resource path="res://LayeredSpriteCloset.gd" type="Script" id=12]
-[ext_resource path="res://resources/keia/layer_group_hair.tres" type="Resource" id=13]
-[ext_resource path="res://resources/keia/layer_group_face.tres" type="Resource" id=14]
-[ext_resource path="res://resources/keia/layer_group_t-shirt.tres" type="Resource" id=15]
-[ext_resource path="res://resources/keia/layer_group_trousers.tres" type="Resource" id=16]
-[ext_resource path="res://resources/keia/layer_group_jacket.tres" type="Resource" id=17]
-[ext_resource path="res://resources/keia/layer_group_shoes.tres" type="Resource" id=18]
-[ext_resource path="res://resources/keia/layer_group_body.tres" type="Resource" id=19]
+[ext_resource type="Script" path="res://Game.gd" id="1"]
+[ext_resource type="Script" path="res://LayeredSprite.gd" id="2"]
+[ext_resource type="SpriteFrames" uid="uid://d0ft23j005ml3" path="res://resources/keia/shoes/00.tres" id="3"]
+[ext_resource type="SpriteFrames" uid="uid://bvlqjvv3fi1cx" path="res://resources/keia/trousers/00.tres" id="4"]
+[ext_resource type="SpriteFrames" uid="uid://c32scb5p2xid7" path="res://resources/keia/face/00.tres" id="5"]
+[ext_resource type="SpriteFrames" uid="uid://bblft6wl7vtyx" path="res://resources/keia/t-shirt/00.tres" id="6"]
+[ext_resource type="SpriteFrames" uid="uid://di1dtahys7tok" path="res://resources/keia/body/00.tres" id="7"]
+[ext_resource type="SpriteFrames" uid="uid://bkcbr072t8s6b" path="res://resources/keia/makeup/00.tres" id="8"]
+[ext_resource type="SpriteFrames" uid="uid://txnojg2y8ksp" path="res://resources/keia/hair_back/00.tres" id="9"]
+[ext_resource type="SpriteFrames" uid="uid://cienl8l3307c6" path="res://resources/keia/jacket/00.tres" id="10"]
+[ext_resource type="SpriteFrames" uid="uid://ct60o1uybvqld" path="res://resources/keia/hair_front/00.tres" id="11"]
+[ext_resource type="Script" path="res://LayeredSpriteCloset.gd" id="12"]
+[ext_resource type="Resource" path="res://resources/keia/layer_group_hair.tres" id="13"]
+[ext_resource type="Resource" path="res://resources/keia/layer_group_face.tres" id="14"]
+[ext_resource type="Resource" path="res://resources/keia/layer_group_t-shirt.tres" id="15"]
+[ext_resource type="Resource" path="res://resources/keia/layer_group_trousers.tres" id="16"]
+[ext_resource type="Resource" path="res://resources/keia/layer_group_jacket.tres" id="17"]
+[ext_resource type="Resource" path="res://resources/keia/layer_group_shoes.tres" id="18"]
+[ext_resource type="Resource" path="res://resources/keia/layer_group_body.tres" id="19"]
 
 [node name="Game" type="Node"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="LayeredSprite" type="Node2D" parent="."]
-position = Vector2( 202.271, 313.898 )
-scale = Vector2( 8, 8 )
-script = ExtResource( 2 )
+position = Vector2(269, 323)
+scale = Vector2(8, 8)
+script = ExtResource("2")
 
-[node name="HairBack" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 9 )
-animation = "iddle_d"
-playing = true
+[node name="HairBack" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("9")
+animation = &"iddle_d"
+frame_progress = 0.58304
 
-[node name="Body" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 7 )
-animation = "iddle_d"
-playing = true
+[node name="Body" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("7")
+animation = &"iddle_d"
 
-[node name="Face" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 5 )
-animation = "iddle_d"
-playing = true
+[node name="Face" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("5")
+animation = &"iddle_d"
 
-[node name="Makeup" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 8 )
-animation = "iddle_d"
-playing = true
+[node name="Makeup" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("8")
+animation = &"iddle_d"
 
-[node name="T-Shirt" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 6 )
-animation = "iddle_d"
-playing = true
+[node name="T-Shirt" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("6")
+animation = &"iddle_d"
 
-[node name="Jacket" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 10 )
-animation = "iddle_d"
-playing = true
+[node name="Jacket" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("10")
+animation = &"iddle_d"
 
-[node name="Trousers" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 4 )
-animation = "iddle_d"
-playing = true
+[node name="Trousers" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("4")
+animation = &"iddle_d"
 
-[node name="Shoes" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 3 )
-animation = "iddle_d"
-playing = true
+[node name="Shoes" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("3")
+animation = &"iddle_d"
 
-[node name="HairFront" type="AnimatedSprite" parent="LayeredSprite"]
-frames = ExtResource( 11 )
-animation = "iddle_d"
-playing = true
+[node name="HairFront" type="AnimatedSprite2D" parent="LayeredSprite"]
+sprite_frames = ExtResource("11")
+animation = &"iddle_d"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 70.0
-margin_top = 70.0
-margin_right = -563.0
-margin_bottom = -70.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 70.0
+offset_top = 70.0
+offset_right = -563.0
+offset_bottom = -70.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-margin_right = 391.0
-margin_bottom = 460.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 2
 
 [node name="LeftRow" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_right = 20.0
-margin_bottom = 460.0
+layout_mode = 2
 
 [node name="VSeparator3" type="VSeparator" parent="MarginContainer/HBoxContainer/LeftRow"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 20.0
-margin_bottom = 150.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 size_flags_vertical = 3
 
 [node name="LeftButton" type="Button" parent="MarginContainer/HBoxContainer/LeftRow"]
-margin_top = 154.0
-margin_right = 20.0
-margin_bottom = 305.0
+layout_mode = 2
 size_flags_vertical = 3
 text = "<"
 
 [node name="VSeparator4" type="VSeparator" parent="MarginContainer/HBoxContainer/LeftRow"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 309.0
-margin_right = 20.0
-margin_bottom = 460.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 size_flags_vertical = 3
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 24.0
-margin_right = 73.0
-margin_bottom = 460.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="CenterRow" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 77.0
-margin_right = 179.0
-margin_bottom = 460.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="UpButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
-margin_right = 102.0
-margin_bottom = 20.0
+layout_mode = 2
 text = "Previous layer"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/CenterRow"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 24.0
-margin_right = 102.0
-margin_bottom = 436.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 size_flags_vertical = 3
 
 [node name="DownButton" type="Button" parent="MarginContainer/HBoxContainer/CenterRow"]
-margin_top = 440.0
-margin_right = 102.0
-margin_bottom = 460.0
+layout_mode = 2
 text = "Next layer"
 
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/HBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 183.0
-margin_right = 233.0
-margin_bottom = 460.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Right" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 237.0
-margin_right = 257.0
-margin_bottom = 460.0
+layout_mode = 2
 
 [node name="VSeparator3" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 20.0
-margin_bottom = 150.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 size_flags_vertical = 3
 
 [node name="RightButton" type="Button" parent="MarginContainer/HBoxContainer/Right"]
-margin_top = 154.0
-margin_right = 20.0
-margin_bottom = 305.0
+layout_mode = 2
 size_flags_vertical = 3
 text = ">"
 
 [node name="VSeparator4" type="VSeparator" parent="MarginContainer/HBoxContainer/Right"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 309.0
-margin_right = 20.0
-margin_bottom = 460.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Values" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_left = 261.0
-margin_right = 391.0
-margin_bottom = 460.0
-rect_min_size = Vector2( 130, 0 )
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
 
 [node name="Group" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
-margin_right = 130.0
-margin_bottom = 14.0
+layout_mode = 2
 
 [node name="Group" type="Label" parent="MarginContainer/HBoxContainer/Values/Group"]
-margin_right = 43.0
-margin_bottom = 14.0
+layout_mode = 2
 text = "Group:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GroupValue" type="Label" parent="MarginContainer/HBoxContainer/Values/Group"]
-margin_left = 47.0
-margin_right = 47.0
-margin_bottom = 14.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 2
 
-[node name="Sprite" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
-margin_top = 18.0
-margin_right = 130.0
-margin_bottom = 32.0
+[node name="Sprite2D" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
+layout_mode = 2
 
-[node name="Sprite" type="Label" parent="MarginContainer/HBoxContainer/Values/Sprite"]
-margin_right = 41.0
-margin_bottom = 14.0
-text = "Sprite:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sprite2D" type="Label" parent="MarginContainer/HBoxContainer/Values/Sprite2D"]
+layout_mode = 2
+text = "Sprite2D:"
 
-[node name="SpriteValue" type="Label" parent="MarginContainer/HBoxContainer/Values/Sprite"]
-margin_left = 45.0
-margin_right = 45.0
-margin_bottom = 14.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="SpriteValue" type="Label" parent="MarginContainer/HBoxContainer/Values/Sprite2D"]
+layout_mode = 2
 
 [node name="Animations" type="OptionButton" parent="MarginContainer/HBoxContainer/Values"]
-margin_top = 36.0
-margin_right = 130.0
-margin_bottom = 56.0
-text = "Animation"
+layout_mode = 2
 flat = true
 
 [node name="Makeup" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Values"]
-margin_top = 60.0
-margin_right = 130.0
-margin_bottom = 84.0
+layout_mode = 2
 
 [node name="Makeup" type="Label" parent="MarginContainer/HBoxContainer/Values/Makeup"]
-margin_top = 5.0
-margin_right = 50.0
-margin_bottom = 19.0
+layout_mode = 2
 text = "Makeup"
 
 [node name="CheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer/Values/Makeup"]
-margin_left = 54.0
-margin_right = 78.0
-margin_bottom = 24.0
-pressed = true
+layout_mode = 2
+button_pressed = true
 
 [node name="LayeredSpriteCloset" type="Node" parent="."]
-script = ExtResource( 12 )
+script = ExtResource("12")
 _layered_sprite_path = NodePath("../LayeredSprite")
-groups = [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 16 ) ]
+groups = [ExtResource("19"), ExtResource("14"), ExtResource("13"), ExtResource("17"), ExtResource("18"), ExtResource("15"), ExtResource("16")]
+
 [connection signal="button_up" from="MarginContainer/HBoxContainer/LeftRow/LeftButton" to="LayeredSpriteCloset" method="previous_asset"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/UpButton" to="LayeredSpriteCloset" method="previous_group"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/CenterRow/DownButton" to="LayeredSpriteCloset" method="next_group"]

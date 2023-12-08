@@ -2,8 +2,8 @@ class_name LayerGroup
 extends Resource
 
 
-export var name: String
-export var members: Dictionary
+@export var name: String
+@export var members: Dictionary
 
 
 var asset_index: int = 0

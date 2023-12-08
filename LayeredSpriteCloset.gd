@@ -5,15 +5,15 @@ extends Node
 # and SpriteFrames of the layers of a LayeredSprite node.
 
 # The path to the layered sprite itself.
-export var _layered_sprite_path: NodePath
+@export var _layered_sprite_path: NodePath
 var layered_sprite: LayeredSprite
 
 # An array of LayerGroups. Each LayerGroup includes 
 # its group name and its members.
-export(Array, Resource) var groups: Array
+@export var groups: Array # (Array, Resource)
 
 var current_group: LayerGroup
-var current_group_index: int = 0 setget set_group_index
+var current_group_index: int = 0: set = set_group_index
 
 
 
